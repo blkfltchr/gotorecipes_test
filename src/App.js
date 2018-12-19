@@ -6,6 +6,7 @@ import store from './store';
 
 import Navbar from './components/layout/NavBar';
 import Recipes from './components/recipes/Recipes';
+import AddRecipe from './components/recipes/AddRecipe'
 
 import './App.css';
 
@@ -19,6 +20,7 @@ class App extends Component {
             <div style={{backgroundColor: "#f6f9fc", padding: "1rem 4rem", minHeight: "100vw"}}>
               <Switch>
                 <Route exact path="/recipes" component={Recipes} />
+                <Route exact path="/recipes/add" component={AddRecipe} />
               </Switch>
             </div>
           </div>
