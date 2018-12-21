@@ -7,6 +7,7 @@ import store from './store';
 import Navbar from './components/layout/NavBar';
 import Recipes from './components/recipes/Recipes';
 import AddRecipe from './components/recipes/AddRecipe'
+import RecipePage from './components/recipes/RecipePage'
 
 import './App.css';
 
@@ -21,6 +22,7 @@ class App extends Component {
               <Switch>
                 <Route exact path="/recipes" component={Recipes} />
                 <Route exact path="/recipes/add" component={AddRecipe} />
+                <Route exact path="/recipes/:id" component={RecipePage} />
               </Switch>
             </div>
           </div>
