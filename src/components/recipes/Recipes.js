@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
+import AddRecipeCard from './AddRecipeCard';
+import RecipeCard from './RecipeCard';
 
 class Recipes extends Component {
 
   render() {
     const { recipes } = this.props;
+
+    // const lunchRecipes = this.props.recipes.filter(recipe => {
+    //   return recipe.meal === "lunch";
+    // }) ; 
 
     if (recipes) {
       return (
@@ -26,46 +31,9 @@ class Recipes extends Component {
               <div className="row">
                 <div style={{display: "flex", flexWrap: "wrap", width: "85vw", margin: "0 auto", justifyContent: "center"}}>
                   {recipes.map(recipe => (
-                      <div className="card" style={{width: "255px", margin: "1rem"}} key={recipe.id}>
-                        <div className="card-body">
-                          <h5 className="card-title">
-                            {recipe.title}
-                          </h5>
-                          <img 
-                            className="card-img-top"
-                            style={{ height: '216px', width: '216px' }}
-                            top width='100%'
-                            src={recipe.image}
-                            alt={recipe.title} />
-                        </div>
-                          <Link
-                            to={`/recipes/${recipe.id}`}
-                            className="btn btn-primary btn-sm"
-                          >
-                            <i className="fas fa-arrow-circle-right" /> Full recipe
-                          </Link>
-                      </div>
-                    ))}
-                    <div className="card" style={{width: "255px", margin: "1rem"}}>
-                        <div className="card-body">
-                          <h5 className="card-title">
-                            Add a recipe
-                          </h5>
-                          <Link to={`/recipes/add`} style={{textDecoration: "none"}}>
-                            <div style={{ height: '216px', width: '216px', border: "1px solid lightgrey", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                                <i 
-                                    className="fa fa-plus fa-5x" 
-                                    aria-hidden="true"
-                                    style={{color: "lightgrey"}}></i>
-                                </div>
-                            </Link>
-                          </div>
-                          <Link
-                            to={`/recipes/add`}
-                            className="btn btn-primary btn-sm">
-                            <i className="fas fa-arrow-circle-right" /> Add a recipe
-                          </Link>
-                      </div>
+                    <RecipeCard id={recipe.id} recipe={recipe} />  
+                  ))}
+                  <AddRecipeCard />
                 </div>
               </div>
             </div>
