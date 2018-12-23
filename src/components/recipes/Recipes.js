@@ -88,7 +88,7 @@ class Recipes extends Component {
               <div className="row">
                 <div style={{display: "flex", flexWrap: "wrap", width: "85vw", margin: "0 auto", justifyContent: "center"}}>
                   {this.state.recipes.map(recipe => (
-                    <RecipeCard id={recipe.id} recipe={recipe} />  
+                    <RecipeCard key={recipe.id} recipe={recipe} />  
                   ))}
                   <AddRecipeCard />
                 </div>

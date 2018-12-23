@@ -11,7 +11,7 @@ const RecipeCard = (props) => {
                 <img 
                 className="card-img-top"
                 style={{ height: '216px', width: '216px' }}
-                top width='100%'
+                width='100%'
                 src={props.recipe.image}
                 alt={props.recipe.title} />
             </div>
