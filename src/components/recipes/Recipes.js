@@ -65,10 +65,10 @@ class Recipes extends Component {
   }
 
   render() {
-    const { recipes } = this.props;
     console.log("Recipe state", this.state.recipes)
-    console.log("Recipe props", recipes)
-    if (recipes) {
+    console.log("Recipe props", this.props.recipes)
+    
+    if (this.props.recipes) {
       return (
         <div className="row">
           <div>
@@ -87,7 +87,7 @@ class Recipes extends Component {
               </div>
               <div className="row">
                 <div style={{display: "flex", flexWrap: "wrap", width: "85vw", margin: "0 auto", justifyContent: "center"}}>
-                  {this.state.recipes.map(recipe => (
+                  {this.props.recipes.map(recipe => (
                     <RecipeCard key={recipe.id} recipe={recipe} />  
                   ))}
                   <AddRecipeCard />
