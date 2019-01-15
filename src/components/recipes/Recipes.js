@@ -9,7 +9,8 @@ import RecipeCard from './RecipeCard';
 class Recipes extends Component {
 
   state = {
-    recipes: []
+    recipes: [],
+    filteredRecipes: []
   }
 
   componentDidUpdate(prevProps) {
@@ -19,6 +20,18 @@ class Recipes extends Component {
       })
     }
   }
+
+  // filterRecipes = (meal) => {
+  //   if (meal !== 'all') {
+  //   // Use spread operator to make copy of state recipes and not mutate it
+  //     let filteredRecipes = [...this.state.recipes]
+  //     filteredRecipes = filteredRecipes.filter((recipe) => {
+  //     return recipe.meal === meal
+  //   })
+  //   this.setState({
+  //     filteredRecipes
+  //   })
+  // }}
 
   filterAllRecipes = () => {
     let allRecipes = this.state.recipes
@@ -80,7 +93,7 @@ class Recipes extends Component {
                     <i className="fas fa-utensils" /> Recipes{' '}
                   </h2>
                 </div>
-                <button onClick={this.filterBreakfastRecipes}>All</button>
+                <button onClick={this.filterAllRecipes}>All</button>
                 <button onClick={this.filterBreakfastRecipes}>Breakfast</button>
                 <button onClick={this.filterLunchRecipes}>Lunch</button>
                 <button onClick={this.filterDinnerRecipes}>Dinner</button>

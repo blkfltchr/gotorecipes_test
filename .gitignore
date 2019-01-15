@@ -20,4 +20,15 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-src/components/recipes/AddImage.js
+src/components/Account/
+src/components/Admin/
+src/components/Firebase/
+src/components/Home/
+src/components/Landing/
+src/components/PasswordChange/
+src/components/PasswordForget/
+src/components/Session/
+src/components/SignIn/
+src/components/SignOut/
+src/components/SignUp/
+src/constants/
