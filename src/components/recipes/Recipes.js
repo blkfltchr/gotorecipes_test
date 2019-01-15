@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { compose } from 'redux';
-import { connect } from 'react-redux';
-import { firestoreConnect } from 'react-redux-firebase';
+// import { compose } from 'redux';
+// import { connect } from 'react-redux';
+// import { firestoreConnect } from 'react-redux-firebase';
 import AddRecipeCard from './AddRecipeCard';
 import RecipeCard from './RecipeCard';
 
@@ -121,9 +121,10 @@ Recipes.propTypes = {
   recipes: PropTypes.array
 };
 
-export default compose(
-  firestoreConnect([{ collection: 'recipes' }]),
-  connect((state, props) => ({
-    recipes: state.firestore.ordered.recipes
-  }))
-)(Recipes);
+export default Recipes 
+// export default compose(
+//   firestoreConnect([{ collection: 'recipes' }]),
+//   connect((state, props) => ({
+//     recipes: state.firestore.ordered.recipes
+//   }))
+// )(Recipes);

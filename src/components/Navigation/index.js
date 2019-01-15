@@ -15,10 +15,11 @@ const NavBar = () => {
         <span className='navbar-toggler-icon'></span>
       </button>
       <div className='collapse navbar-collapse justify-content-end' id='navbarNavAltMarkup'>
-        <div className='navbar'>
-          <a className='nav-item nav-link active' href='/recipes'>My recipes</a>
-          <a className='nav-item nav-link active' href='/recipes/add'>Add a recipe</a>
-          <a className='nav-item nav-link active' href='/search'><i className='fas fa-search' /></a>
+        <div className='navbar nav-pills'>
+          <a className='nav-item nav-link' href='/recipes'>My recipes</a>
+          <a className='nav-item nav-link' href='/recipes/add'>Add a recipe</a>
+          <a className='nav-item nav-link' href='/search'><i className='fas fa-search' /></a>
+          <a className='nav-item nav-link active' href='/signup'>Sign up</a>
         </div>
       </div>
     </div>
