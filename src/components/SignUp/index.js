@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 
+import { LogInLink } from '../LogIn';
 import { withFirebase } from '../Firebase';
-import * as ROUTES from '../../constants/routes';
 
 const SignUpPage = () => (
   <div>
       <h1>Sign Up</h1>
       <SignUpForm />
+      <LogInLink />
   </div>
 );
 
@@ -103,7 +104,7 @@ class SignUpFormBase extends Component {
 
 const SignUpLink = () => (
   <p>
-    Don't have an account? <Link to={ROUTES.SIGN_UP}>Sign Up</Link>
+    Don't have an account? <Link to="/signup">Sign Up</Link>
   </p>
 );
 

@@ -27,6 +27,5 @@ src/components/Landing/
 src/components/PasswordChange/
 src/components/PasswordForget/
 src/components/Session/
-src/components/SignIn/
-src/components/SignOut/
+src/components/LogOut/
 src/constants/roles.js

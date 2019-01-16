@@ -19,7 +19,7 @@ const NavBar = () => {
           <a className='nav-item nav-link' href='/recipes'>My recipes</a>
           <a className='nav-item nav-link' href='/recipes/add'>Add a recipe</a>
           <a className='nav-item nav-link' href='/search'><i className='fas fa-search' /></a>
-          <a className='nav-item nav-link active' href='/signup'>Sign up</a>
+          <a className='nav-item nav-link active' href='/login'>Log In</a>
         </div>
       </div>
     </div>

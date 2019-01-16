@@ -9,6 +9,8 @@ import Recipes from '../../components/Recipes/Recipes';
 import AddRecipe from '../../components/Recipes/AddRecipe'
 import RecipePage from '../../components/Recipes/RecipePage'
 import SignupPage from '../../components/SignUp/index'
+import LoginPage from '../../components/LogIn/index'
+
 
 import '../../App.css';
 
@@ -25,6 +27,7 @@ class App extends Component {
                 <Route exact path="/recipes/add" component={AddRecipe} />
                 <Route exact path="/recipes/:id" component={RecipePage} />
                 <Route exact path="/signup" component={SignupPage} />
+                <Route exact path="/login" component={LoginPage} />
               </Switch>
             </div>
           </div>
