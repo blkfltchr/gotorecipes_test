@@ -117,7 +117,7 @@ class Recipes extends Component {
 }
 
 Recipes.propTypes = {
-  firestore: PropTypes.object.isRequired,
+  // firestore: PropTypes.object.isRequired,
   recipes: PropTypes.array
 };
 
