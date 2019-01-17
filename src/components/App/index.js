@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
-import { withFirebase } from '../Firebase';
 
 // import { Provider } from 'react-redux';
 // import store from '../../store';
@@ -15,34 +13,15 @@ import LoginPage from '../../components/LogIn/index'
 
 import '../../App.css';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+import { withAuthentication } from '../Session';
 
-    this.state ={
-      authUser: null,
-    }
-  }
+const App = () => {
 
-  componentDidMount() {
-    this.listener = this.props.firebase.auth.onAuthStateChanged(authUser => {
-      authUser
-        ? this.setState({ authUser })
-        : this.setState({ authUser: null });
-    });
-  }
-
-  componentWillUnmount() {
-    this.listener();
-  }
-
-  render() {
-    console.log("auth:", this.state.authUser)
     return (
       // <Provider store={store}>
         <Router>
           <div className="App">
-            <Navbar authUser={this.state.authUser}/>
+            <Navbar />
             <div style={{backgroundColor: "#f6f9fc", padding: "1rem 4rem", height: "100vw"}}>
               <Switch>
                 <Route exact path="/recipes" component={Recipes} />
@@ -54,9 +33,8 @@ class App extends Component {
             </div>
           </div>
         </Router>
-      // </Provider>
+      // {/* </Provider> */}
     );
   }
-}
 
-export default withFirebase(App);
+export default withAuthentication(App);

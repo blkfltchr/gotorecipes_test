@@ -1,8 +1,16 @@
 import React from 'react'
 import LogOutButton from '../LogOut';
 
-const NavBar = ({ authUser }) => (
-  <div>{authUser ? <NavBarAuth /> : <NavBarNonAuth />}</div>
+import { AuthUserContext } from '../Session';
+
+const NavBar = () => (
+  <div>
+    <AuthUserContext.Consumer>
+      {authUser =>
+        authUser ? <NavBarAuth /> : <NavBarNonAuth />
+      }
+    </AuthUserContext.Consumer>
+  </div>
 );
 
 const NavBarAuth = () => {
