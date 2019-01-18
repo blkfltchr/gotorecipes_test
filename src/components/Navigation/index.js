@@ -1,5 +1,4 @@
 import React from 'react'
-import LogOutButton from '../LogOut';
 
 import { AuthUserContext } from '../Session';
 
@@ -33,7 +32,6 @@ const NavBarAuth = () => {
           <a className='nav-item nav-link' href='/recipes/add'>Add a recipe</a>
           <a className='nav-item nav-link' href='/search'><i className='fas fa-search' /></a>
           <a className='nav-item nav-link' href="/account"><i className='fas fa-cog' /></a>
-          <a className='nav-item nav-link' href="/"><LogOutButton /></a>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { AuthUserContext, withAuthorization } from '../Session';
 import ResetPasswordForm from '../ResetPassword';
+import LogOutButton from '../LogOut';
 
 const AccountPage = () => (
   <AuthUserContext.Consumer>
@@ -9,6 +10,7 @@ const AccountPage = () => (
       <div>
         <h1>Account: {authUser.email}</h1>
         <ResetPasswordForm />
+        <LogOutButton />
       </div>
     )}
   </AuthUserContext.Consumer>
