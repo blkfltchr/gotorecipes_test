@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import AddRecipeCard from './AddRecipeCard';
 import RecipeCard from './RecipeCard';
 
+import { withAuthorization } from '../Session';
+
 class Recipes extends Component {
 
   state = {
@@ -111,7 +113,12 @@ class Recipes extends Component {
         </div>
       );
     } else {
-      return <h1>Loading...</h1>;
+      return (
+        <div>
+          <h1>Loading...</h1>
+          <p>This page is only accessible to signed in users...</p>
+        </div>
+      )
     }
   }
 }
@@ -121,7 +128,9 @@ Recipes.propTypes = {
   recipes: PropTypes.array
 };
 
-export default Recipes 
+const condition = authUser => !!authUser;
+
+export default withAuthorization(condition)(Recipes);
 // export default compose(
 //   firestoreConnect([{ collection: 'recipes' }]),
 //   connect((state, props) => ({
