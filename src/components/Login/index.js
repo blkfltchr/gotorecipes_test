@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
 
-import { ForgotPasswordLink } from '../ForgotPassword';
 import { SignUpLink } from '../SignUp';
+import { ForgotPasswordLink } from '../ForgotPassword';
+
 import { withFirebase } from '../Firebase';
 
 const LogInPage = () => (

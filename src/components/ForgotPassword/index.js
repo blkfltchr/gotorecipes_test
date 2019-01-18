@@ -53,14 +53,14 @@ class ForgotPasswordFormBase extends Component {
                 <div className="form-group">
                     <input
                     name="email"
-                    value={email}
+                    value={this.state.email}
                     onChange={this.onChange}
                     type="email"
                     className="form-control"
                     placeholder="Email Address"
                     />
                 </div>
-                <button disabled={isInvalid} type="submit" className="btn btn-primary mb-3">Reset My Password</button>
+                <button disabled={isInvalid} type="submit" className="btn btn-primary mb-3">Send me an email to reset my password</button>
 
                 {error && <p>{error.message}</p>}
             </form>

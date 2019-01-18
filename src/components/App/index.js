@@ -11,6 +11,7 @@ import RecipePage from '../../components/Recipes/RecipePage'
 import SignupPage from '../../components/SignUp/index'
 import LoginPage from '../../components/LogIn/index'
 import ForgotPasswordPage from '../ForgotPassword/index.js';
+import AccountPage from '../Account/index.js';
 
 import '../../App.css';
 
@@ -31,6 +32,7 @@ const App = () => {
                 <Route exact path="/signup" component={SignupPage} />
                 <Route exact path="/login" component={LoginPage} />
                 <Route exact path="/reset-password" component={ForgotPasswordPage} />
+                <Route exact path="/account" component={AccountPage} />
               </Switch>
             </div>
           </div>
